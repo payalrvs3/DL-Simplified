@@ -1,47 +1,173 @@
-# Research-topic-Prediction
+# 🧠 Research Paper Recommendation System
 
-## Overview
+---
 
-Researchers have access to large online archives of scientific articles. As a consequence, finding relevant articles has become more difficult. Tagging or topic modelling provides a way to give token of identification to research articles which facilitates recommendation and search process.
+# 📑 Abstract
 
-## Dataset
+Research papers are continuously increasing across multiple domains, making it difficult for researchers and students to efficiently discover relevant papers. Traditional keyword-based search systems often fail to capture the actual semantic meaning and contextual relationships between research papers.
 
-The dataset used in this challenge consists of research papers with their titles, abstracts, and corresponding categories. The categories include:
+This project focuses on building an intelligent **Research Paper Recommendation System** using advanced Natural Language Processing (NLP) techniques such as **TF-IDF**, **BERT Embeddings**, **FAISS Similarity Search**, and **Random Forest experimentation**. These techniques help generate context-aware recommendations by understanding the semantic meaning of research paper summaries instead of relying only on exact keyword matching.
 
-- Computer Science
-- Physics
-- Mathematics
-- Statistics
-- Quantitative Biology
-- Quantitative Finance
+The system aims to improve research discovery by providing faster, more relevant, and semantically accurate paper recommendations.
 
-## Approach
+---
 
-The approach used to solve this challenge is as follows:
+# 🌍 Context
 
-1. **Data Preprocessing**: The title and abstract of each research paper are combined and preprocessed by removing punctuation, converting to lowercase, and removing stop words.
-2. **Feature Extraction**: The preprocessed text data is then converted into numerical features using the CountVectorizer and TfidfTransformer from scikit-learn.
-3. **Model Training**: A MultiOutputClassifier with a LinearSVC estimator is trained on the feature data to predict the categories of the research papers.
-4. **Model Evaluation**: The performance of the model is evaluated using accuracy score, precision, recall, and F1-score.
-5. **Submission**: The predicted categories for the test data are submitted in a CSV file.
+With the rapid growth of scientific publications, manually searching for relevant research papers has become increasingly difficult and time-consuming. Researchers often struggle to find papers closely related to their topics of interest due to information overload.
 
-## Code Structure
+Semantic recommendation systems can address this problem by understanding contextual relationships between papers and retrieving the most relevant research documents efficiently. This project demonstrates how modern NLP and vector similarity techniques can simplify research exploration and improve paper discovery.
 
-The code is organized into the following sections:
+---
 
-1. **Importing Libraries**: The necessary libraries, including scikit-learn, pandas, and numpy, are imported.
-2. **Loading Data**: The training and test data are loaded from CSV files.
-3. **Data Preprocessing**: The title and abstract of each research paper are combined and preprocessed.
-4. **Feature Extraction**: The preprocessed text data is converted into numerical features.
-5. **Model Training**: The MultiOutputClassifier with a LinearSVC estimator is trained on the feature data.
-6. **Model Evaluation**: The performance of the model is evaluated using accuracy score, precision, recall, and F1-score.
-7. **Submission**: The predicted categories for the test data are submitted in a CSV file.
+# ⚙️ Methodology
 
-## Dependencies
+---
 
-The following dependencies are required to run the code:
+## Project Overview
 
-- scikit-learn
-- pandas
-- numpy
+The Research Paper Recommendation System is designed to recommend semantically similar research papers using text-based analysis and vector similarity search techniques.
 
+The project explores multiple approaches including:
+
+- TF-IDF based recommendation
+- BERT semantic embeddings
+- FAISS vector similarity search
+- Random Forest experimentation
+
+These approaches are implemented to compare recommendation quality, retrieval speed, and semantic understanding.
+
+---
+
+## 📂 Notebooks Included
+
+### 📄 01_preprocessing.ipynb
+
+This notebook performs all preprocessing and cleaning operations on the dataset.
+
+### Operations Performed
+
+- Dataset loading
+- Selecting top 5000 rows
+- Handling missing values
+- Removing duplicates
+- Text preprocessing
+- Lowercasing
+- Removing special characters
+- Stopword removal
+- Feature preparation
+
+---
+
+### 📄 02_tfidf_model.ipynb
+
+This notebook implements the recommendation system using **TF-IDF Vectorization** and cosine similarity.
+
+### Techniques Used
+
+- TF-IDF Vectorizer
+- Cosine Similarity
+- NLP text representation
+
+### Functionality
+
+- Converts summaries into TF-IDF vectors
+- Computes similarity scores
+- Generates research paper recommendations
+
+---
+
+### 📄 03_bert_model.ipynb
+
+This notebook uses **BERT embeddings** for semantic understanding of research papers.
+
+### Techniques Used
+
+- Sentence Transformers
+- BERT Embeddings
+- Semantic similarity analysis
+
+### Functionality
+
+- Generates contextual embeddings
+- Captures semantic meaning
+- Produces context-aware recommendations
+
+---
+
+### 📄 04_faiss_search.ipynb
+
+This notebook implements **FAISS-based semantic similarity search** for fast recommendation retrieval.
+
+### Techniques Used
+
+- FAISS Vector Indexing
+- Similarity Search
+- Nearest Neighbor Retrieval
+
+### Functionality
+
+- Stores vector embeddings efficiently
+- Retrieves top similar papers quickly
+- Performs scalable semantic search
+
+---
+
+# 🌲 Random Forest Experimentation
+
+Random Forest was also used during experimentation for classification and model evaluation.
+
+### Why Random Forest?
+
+- Handles high-dimensional data efficiently
+- Reduces overfitting
+- Provides stable performance
+- Useful for comparison and experimentation
+
+---
+
+# 📊 Features
+
+- Research paper recommendation
+- Semantic similarity search
+- NLP-based analysis
+- BERT contextual embeddings
+- Fast FAISS retrieval
+- Multiple recommendation approaches
+- Interactive visualizations and EDA
+
+---
+
+# 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- NLP
+- TF-IDF
+- BERT
+- Sentence Transformers
+- FAISS
+
+---
+
+# 📌 Notes
+
+- Only the top 5000 rows of the dataset were used for faster experimentation and processing.
+- The project is intended for educational and research purposes.
+- Multiple recommendation approaches were implemented for performance comparison and semantic analysis.
+
+---
+
+# 🚀 Future Improvements
+
+- Hybrid recommendation models
+- Larger dataset support
+- Real-time recommendation system
+- Improved ranking mechanisms
+- Full-stack deployment
+- Personalized recommendations
+
+---
